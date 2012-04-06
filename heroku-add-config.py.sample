@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+
+heroku = "/usr/bin/heroku"
+app = "stupid-web-nikki"
+
+debug = ""
+secret_key = "development key"
+
+os.system('%s config:add --app %s DEBUG=%s'        % (heroku, app, debug))
+os.system('%s config:add --app %s SECRET_KEY="%s"' % (heroku, app, secret_key))

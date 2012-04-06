@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <title>数式エディタ</title>
+ <script type="text/javascript" src="/static/js/jquery-1.7.min.js"></script>
+ <script type="text/javascript" src="/static/js/sample/google-tex/main.js"></script>
+</head>
+
+<body>
+  <h2>数式エディタ</h2>
+  <div>
+   <p>次のテキストボックスにTeX形式で数式を入力してね。</p>
+   <input id="math-form" type="text" size="64" placeholder="TeX形式の数式を入力してください" value="f(n)=1+2+...+n=\sum^{n}_{i=1}i=\frac{n(n+1)}{2}" autofocus />
+  </div>
+  <h2>プレビュー</h2>
+  <div>
+   <img id="math-preview" src="http://chart.apis.google.com/chart?cht=tx&chl=f(n)%3D1%2B2%2B...%2Bn%3D%5Csum%5E%7Bn%7D_%7Bi%3D1%7Di%3D%5Cfrac%7Bn(n%2B1)%7D%7B2%7D" alt="" /><br />
+  </div>
+  <h2>コピペ</h2>
+  <div>
+   <input id="preview-url" type="text" size="64" value="http://chart.apis.google.com/chart?cht=tx&chl=f(n)%3D1%2B2%2B...%2Bn%3D%5Csum%5E%7Bn%7D_%7Bi%3D1%7Di%3D%5Cfrac%7Bn(n%2B1)%7D%7B2%7D" />
+  </div>
+</body>
+
+</html>
+
