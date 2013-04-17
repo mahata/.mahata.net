@@ -1,19 +1,20 @@
+# -*- coding: utf-8 -*-
 # puts eval(ARGV*'..')
-eval([1,ARGV[0]]*'..')
+# eval([1,ARGV[0]]*'..')
 
 
-(1..ARGV[0].to_i).each {|i|
-	o = ''
-	o += 'fizz' if i % 3 == 0
-	o += 'buzz' if i % 5 == 0
-	puts o == '' ? i : o
-}
+# (1..ARGV[0].to_i).each {|i|
+# 	o = ''
+# 	o += 'fizz' if i % 3 == 0
+# 	o += 'buzz' if i % 5 == 0
+# 	puts o == '' ? i : o
+# }
 
-(1..ARGV[0].to_i).each {|i|
-	f = ['fizz'][i % 3]
-	b = ['buzz'][i % 5]
-	puts f + b
-}
+# (1..ARGV[0].to_i).each {|i|
+# 	f = ['fizz'][i % 3]
+# 	b = ['buzz'][i % 5]
+# 	puts f + b
+# }
 
 # 文字列 ("Fizz") > シンボル (:Fizz)
 # ARGV => $*
@@ -65,4 +66,5 @@ eval([1,ARGV[0]]*'..')
 # }
 
 # (1..$*[0].to_i).each{|i|o=[[:Fizz][i%3],[:Buzz][i%5]]*'';puts o==''?i:o}
+# 1.upto($*[0].to_i){|i|o=[[:Fizz][i%3],[:Buzz][i%5]]*'';puts o==''?i:o}
 
