@@ -41,7 +41,6 @@
 <body class="deck-container">
 
 <!-- Begin slides. Just make elements with a class of slide. -->
-
 <section class="slide">
     <h1>Code Golf in Ruby</h1>
 </section>
@@ -174,6 +173,7 @@ Fizz
     <span class="deck-status-current"></span>
     /
     <span class="deck-status-total"></span>
+    <span class="timer"></span>
 </p>
 
 <!-- deck.goto snippet -->
@@ -205,9 +205,17 @@ Fizz
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
-    $(function() {
-        $.deck('.slide');
-    });
+$(function() {
+    $.deck('.slide');
+
+    // timer
+    var timeLimit = 300;
+    setInterval(function() {
+        $('span.timer').text(': ' + timeLimit + ' sec.')
+        timeLimit--;
+    }, 1000);
+});
 </script>
+
 </body>
 </html>
