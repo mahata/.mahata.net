@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1024, user-scalable=no">
 
-    <title>April 22, 2013: Code Golf in Ruby - Ruby Meetup @ HootSuite</title>
+    <title>June 13, 2013: Zsh Introduction - HootSuite Internal LT @ HootSuite</title>
     
     <!-- Required stylesheet -->
     <link rel="stylesheet" href="/static/js/deck/core/deck.core.css">
@@ -42,121 +42,17 @@
 
 <!-- Begin slides. Just make elements with a class of slide. -->
 <section class="slide">
-    <h1>Code Golf in Ruby</h1>
+    <h1>Zsh Introduction</h1>
 </section>
 
 <section class="slide">
-    <h2>Yasunori MAHATA</h2>
-    <h3>• Software Engineer @ HootSuite</h3>
-    <h3>• <span class="strong-text">PHP</span> / <span class="strong-text">Python</span> / JavaScript for work</h3>
-    <h3>• <span class="strong-text">Ruby</span> / Scala for personal projects</h3>
-    <h3 class="slide">• Amateur Golfer</h3>
-</section>
-
-<section class="slide">
-    <h2>What's Code Golf?</h2>
-    <h3>• Shorter code is better code</h3>
-    <h3>• Readability doesn't matter</h3>
-    <h3>• Speed doesn't matter</h3>
-</section>
-
-<section class="slide">
-    <h2>Languages suitable for Code Golf</h2>
-    <h3>• PHP: variables with $, no array literal (until version 5.4), array_* func</h3>
-    <h3>• Python: Indents as grammar</h3>
-    <h3 class="slide">• How about Ruby?</h3>
-</section>
-
-<section class="slide">
-    <h2>Ruby as a Golf Language</h2>
-    <h3>• 1 char variable</h3>
-    <h3>• 2 char array literal</h3>
-    <h3>• No grammatical meaning for Indents</h3>
-</section>
-
-<section class="slide">
-    <h2>Golf with FizzBuzz</h2>
-    <img src="/static/img/presentation/20130422/new-quest.gif" />
-    <p style="text-align: center;">(via <a href="http://laser-lobotomy.tumblr.com/post/18120098871">LASER LOBOTOMY</a>)</p>
-</section>
-
-<section class="slide">
-    <h2>Naive implementation</h2>
-    <code><pre class="large-text">(1..ARGV[0].to_i).each {|i|
-  f = 'Fizz' if i % 3 == 0
-  b = 'Buzz' if i % 5 == 0
-  o = f.to_s + b.to_s
-  puts o == '' ? i : o
-}</pre></code>
-    <code><pre class="slide large-text">$ irb
-&gt; ['Fizz'][0 % 3] #=> "Fizz"
-&gt; ['Fizz'][1 % 3] #=> nil
-&gt; ['Fizz'][2 % 3] #=> nil
-&gt; ['Fizz'][3 % 3] #=> "Fizz"</pre></code>
-</section>
-
-<section class="slide">
-    <h2>"no more if" version</h2>
-    <code><pre class="large-text">(1..ARGV[0].to_i).each {|i|
-  f = ['Fizz'][i % 3]
-  b = ['Buzz'][i % 5]
-  o = f.to_s + b.to_s
-  puts o == '' ? i : o
-}</pre></code>
-    <code><pre class="slide large-text">$ irb
-&gt; puts :Fizz
-Fizz
-=> nil
-&gt; "(1..ARGV[0].to_i).each{|i|".length
-=> 26
-&gt; "1.upto($*[0].to_i){|i|".length
-=> 22</pre></code>
-</section>
-
-<section class="slide">
-    <h2>"small tricks" version</h2>
-    <code><pre class="large-text">1.upto($*[0].to_i){|i|
-  f = [:Fizz][i % 3]
-  b = [:Buzz][i % 5]
-  o = f.to_s + b.to_s
-  puts o == '' ? i : o
-}</pre></code>
-    <code><pre class="slide large-text">$ irb
-&gt; [1, 2, 3, 4, 5].join("!")
-=&gt; "1!2!3!4!5"
-&gt; [1, 2, 3, 4, 5] * "!"
-=&gt; "1!2!3!4!5"</pre></code>
-</section>
-
-<section class="slide">
-    <h2>last version</h2>
-    <code><pre class="large-text">1.upto($*[0].to_i){|i|
-  o = [[:Fizz][i % 3], [:Buzz][i % 5]] * ''
-  puts o == '' ? i : o
-}</pre></code>
-<div class="slide">
-<h2>minify!</h2>
-<code><pre class="large-text">1.upto($*[0].to_i){|i|o=[[:Fizz][i%3],[:Buzz][i%5]]*'';puts o==''?i:o}</pre></code>
-</div>
-</section>
-
-<section class="slide">
-    <h2>Original</h2>
-    <code><pre class="large-text">(1..ARGV[0].to_i).each {|i|
-  f = 'Fizz' if i % 3 == 0
-  b = 'Buzz' if i % 5 == 0
-  o = f.to_s + b.to_s
-  puts o == '' ? i : o
-}</pre></code>
-    <h2>Shortened</h2>
-    <code><pre class="large-text">1.upto($*[0].to_i){|i|o=[[:Fizz][i%3],[:Buzz][i%5]]*'';puts o==''?i:o}</pre></code>
-</section>
-
-<section class="slide">
-    <h2>That's it!</h2>
-    <img src="/static/img/presentation/20130422/last-word.jpg" />
-    <p style="text-align: center;">(via <a href="http://techpp.com/2012/07/02/boycott-apple/">techpp.com</a>)</p>
-    <h2>No, nothing.  Thanks!</h2>
+    <h2>Zsh popularity</h2>
+    <code><pre class="large-text">$ grep bash /etc/passwd | wc -l
+??
+    </pre></code>
+    <code><pre class="large-text">$ grep zsh /etc/passwd | wc -l
+??
+    </pre></code>
 </section>
 
 <!-- End slides. -->

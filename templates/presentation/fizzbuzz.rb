@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+@# -*- coding: utf-8 -*-
 # puts eval(ARGV*'..')
 # eval([1,ARGV[0]]*'..')
 

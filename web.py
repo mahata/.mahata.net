@@ -3,7 +3,7 @@
 
 import os
 
-from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
+from flask import Flask, render_template
 
 app = Flask(__name__)
 app.config.update(DEBUG=bool(os.getenv('DEBUG')), SECRET_KEY=os.getenv('SECRET_KEY'))
