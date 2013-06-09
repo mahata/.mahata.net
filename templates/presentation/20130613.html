@@ -27,6 +27,10 @@
     <!-- Required Modernizr file -->
     <script src="/static/js/deck/modernizr.custom.js"></script>
     <style type="text/css">
+    span.keybind {
+        color: #c00;
+        font-style: italic;
+    }
     span.strong-text {
         color: #f00;
         font-size: 110%;
@@ -48,49 +52,75 @@
 <section class="slide">
     <h2>Zsh popularity</h2>
     <code><pre class="large-text">$ grep bash /etc/passwd | wc -l
-??
-    </pre></code>
+??</pre></code>
     <code><pre class="large-text">$ grep zsh /etc/passwd | wc -l
-??
-    </pre></code>
+??</pre></code>
 </section>
 
 <section class="slide">
-    <h2>Zsh cursor movements</h2>
-    <ul>
-        <li>Emacs Keybinds</li>
-        <li>Ctrl-r (for search)</li>
-    </ul>
+    <h2>Zsh cursor move [Emacs bindings]</h2>
+    <h3>• Move forward / backward:<br /><span class="keybind">&raquo; Ctrl-f / Ctrl-b</div></h3>
+    <h3>• Move to next word / prev word:<br /><span class="keybind">&raquo; At-f / Alt-b</span></h3>
+    <h3>• Move to BOL / EOL:<br /><span class="keybind">&raquo; Ctrl-a / Ctrl-e</span></h3>
+    <h3>• Line up / down:<br /><span class="keybind">&raquo; Ctrl-p / Ctrl-n</span></h3>
+</section>
+
+<section class="slide">
+    <h2>Zsh search history</h2>
+    <h3>• Ctrl-r [SEARCH-WORD]</h3>
 </section>
 
 <section class="slide">
     <h2>Zsh completion [TAB]</h2>
-    <h3>Completion for...</h3>
-    <ul>
-        <li>directory path</li>
-        <li>command options</li>
-        <li>configure</li>
-    </ul>
+    <h3>• directory path</h3>
+    <h3>• command options</h3>
+    <h3>• configure script</h3>
+    <code><pre class="large-text">$ cd /u/lo/b[TAB]
+$ git[TAB]
+$ ./configure --[TAB]</pre></code>
 </section>
 
 <section class="slide">
-    <h2>Aliases with Pipes</h2>
+    <h2>Aliase with Pipe "|"</h2>
+    <code><pre class="large-text">$ alias -g L="| less"
+$ alias -g G="| grep"</pre></code>
 </section>
 
 <section class="slide">
-    <h2>Open apps depending on file extentions</h2>
+    <h2>Handle files based on their ext</h2>
+    <code><pre class="large-text">$ alias -s txt=vim
+$ alias -s {html,jpg,jpeg,gif,png,pdf}=open
+</pre></code>
 </section>
 
 <section class="slide">
     <h2>No more pushd, popd</h2>
+    <code><pre class="large-text">$ popd
+</pre></code>
+    <code><pre class="large-text">$ cd -[TAB]
+</pre></code>
 </section>
 
 <section class="slide">
     <h2>No more cd</h2>
+    <code><pre class="large-text">$ /var/log [ENTER]</pre></code>
 </section>
 
 <section class="slide">
     <h2>Switch to Zsh?</h2>
+    <code><pre class="large-text">$ chsh [ENTER]
+Password: 
+  Login Shell [/bin/bash]: /bin/zsh
+</pre></code>
+</section>
+
+<section class="slide">
+    <h2>LT is too short to cover Zsh :-(</h2>
+    <h3>• <a href="https://www.google.com/search?q=zsh+tips">Google it!</a></h3>
+</section>
+
+<section class="slide">
+    <h1>Thanks!</h1>
 </section>
 
 <!-- End slides. -->
