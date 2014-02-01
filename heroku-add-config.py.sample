@@ -3,7 +3,7 @@
 
 import os
 
-heroku = "/usr/bin/heroku"
+heroku = "/usr/bin/env heroku"
 app = "stupid-web-nikki"
 
 debug = ""
