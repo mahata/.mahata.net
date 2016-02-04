@@ -55,7 +55,7 @@
 </section>
 
 <section class="slide">
-    <h2>Vagrant is F/E for various env</h2>
+    <h2>Vagrant is F/E for various environments</h2>
     <h3>• VirtualBox</h3>
     <h3>• VMWare</h3>
     <h3>• AWS</h3>
@@ -73,14 +73,56 @@ end</pre></code>
 </section>
 
 <section class="slide">
-    <h2>Where do you search Vagrant boxes?</h2>
+    <h2>Where can I find Vagrant boxes?</h2>
     <h3>• <a href="http://www.vagrantbox.es/">Vagrantbox.es</a></h3>
     <h3>• <a href="https://atlas.hashicorp.com/boxes/search?vagrantcloud=1">Vagrant Cloud</a> (i.e. vagrant box add centos/7)</h3>
 </section>
 
+<section class="slide">
+    <h2>Let's take a look at an actual Vagrantfile</h2>
+    <h3>DEMO</h3>
+</section>
+
+<section class="slide">
+    <h2>What is Ansible?</h2>
+    <h3>• A provisioner for machines</h3>
+    <h3>• Competitors: Chef, Puppet, SaltStack</h3>
+</section>
+
+<section class="slide">
+    <h2>Why provisioner?</h2>
+    <h3>• Write configurations as code</h3>
+    <h3>• Configurations with VCS (such as Git)</h3>
+</section>
+
+<section class="slide">
+    <h2>Why Ansible?</h2>
+    <h3>• No DSL is needed</h3>
+    <h3>• No Agent process is needed</h3>
+    <h3>• Configuration as YAML</h3>
+    <h3>• Back up by RedHat</h3>
+</section>
+
+<section class="slide">
+    <h2>How Ansible is integrated with Vagrant?</h2>
+    <h3>• Demo</h3>
+</section>
+
+<section class="slide">
+    <h2>Other provisioners with Vagrant?</h2>
+    <h3>• See: <a href="https://www.vagrantup.com/docs/provisioning/">Vagrant Provisioning</a></h3>
+</section>
+
+<section class="slide">
+    <h2>How Ansible is integrated with Docker?</h2>
+    <h3>• Demo</h3>
+</section>
+
+<section class="slide">
+    <h1>Questions?</h1>
+</section>
 
 <!-- End slides. -->
-
 
 <!-- Begin extension snippets. Add or remove as needed. -->
 
@@ -130,7 +172,7 @@ $(function() {
     $.deck('.slide');
 
     // timer
-    var timeLimit = 900;
+    var timeLimit = 600;
     setInterval(function() {
         $('span.timer').text(': ' + timeLimit + ' sec.')
         timeLimit--;
