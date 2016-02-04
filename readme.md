@@ -17,7 +17,6 @@ Following command list is a step-by-step instruction to install web-presentation
     $ source ~/web-presentations/bin/activate
     $ cd web-presentations
     $ pip install -r requirements.txt
-    $ cp local-add-config.sh.sample local-add-config.sh
     $ source local-add-config.sh
     $ python web.py
 
